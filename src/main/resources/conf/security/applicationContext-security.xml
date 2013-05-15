@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:sec="http://www.springframework.org/schema/security" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+      http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+      http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security.xsd">
+
+
+	<sec:http>
+		<sec:intercept-url pattern="/**" access="IS_AUTHENTICATED_FULLY" />
+		<sec:form-login />
+		<sec:logout />
+	</sec:http>
+
+	<sec:authentication-manager alias="authenticationManager">
+		<sec:authentication-provider>
+			<sec:password-encoder hash="plaintext" />
+			<sec:user-service>
+				<sec:user name="20001462" password="ler123"
+					authorities="ROLE_SUPERVISOR, ROLE_USER, ROLE_TELLER" />
+				<sec:user name="20002155" password="ler123"
+					authorities="ROLE_SUPERVISOR, ROLE_USER, ROLE_TELLER" />
+			</sec:user-service>
+		</sec:authentication-provider>
+	</sec:authentication-manager>
+</beans>
