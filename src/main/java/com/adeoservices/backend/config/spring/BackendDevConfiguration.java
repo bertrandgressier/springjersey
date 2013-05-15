@@ -3,7 +3,6 @@ package com.adeoservices.backend.config.spring;
 import org.apache.commons.dbcp.BasicDataSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Profile;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.env.Environment;
 
@@ -18,7 +17,6 @@ import javax.sql.DataSource;
  */
 
 @Configuration
-@Profile("dev")
 @PropertySource({"classpath:conf/db/backend-ds.properties"})
 public class BackendDevConfiguration {
 
