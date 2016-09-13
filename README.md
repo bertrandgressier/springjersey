@@ -1,7 +1,7 @@
 Spring Jersey Hibernate Spring-data
 =============
 
-This is an example project to initialize a project  :
+This is a startup project 
 
 * spring-version : 3.2.2.RELEASE
 * hibernate : 4.2.1.Final
@@ -9,8 +9,8 @@ This is an example project to initialize a project  :
 * Spring-data
 
 
-The database is initialize with liquibase.
+The database is initialized with liquibase.
 
 NO XML
 -----
-All configurations set in java
+All configuration is defined directly in java
